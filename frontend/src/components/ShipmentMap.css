@@ -1,0 +1,112 @@
+.shipment-map {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.leaflet-container {
+  border-radius: 8px;
+}
+
+.map-popup {
+  min-width: 200px;
+}
+
+.map-popup h4 {
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+.map-popup p {
+  margin: 4px 0;
+  font-size: 13px;
+  color: #2c3e50;
+}
+
+.map-popup small {
+  color: #6c757d;
+  font-size: 11px;
+}
+
+.map-legend {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  font-size: 12px;
+  z-index: 1000;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.legend-item:last-child {
+  margin-bottom: 0;
+}
+
+.legend-marker {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-marker.green {
+  background-color: #27ae60;
+}
+
+.legend-marker.blue {
+  background-color: #3498db;
+}
+
+.legend-marker.orange {
+  background-color: #f39c12;
+}
+
+.legend-marker.red {
+  background-color: #e74c3c;
+}
+
+.legend-line {
+  width: 20px;
+  height: 2px;
+  background-color: #3498db;
+  border-top: 2px dashed #3498db;
+  display: inline-block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .shipment-map {
+    margin: 0 -10px;
+  }
+  
+  .leaflet-container {
+    height: 300px !important;
+  }
+  
+  .map-legend {
+    bottom: 5px;
+    right: 5px;
+    padding: 8px;
+    font-size: 11px;
+  }
+  
+  .legend-marker {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .legend-line {
+    width: 15px;
+  }
+}

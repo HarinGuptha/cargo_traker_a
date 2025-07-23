@@ -1,0 +1,184 @@
+.shipment-table-container {
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 100%;
+}
+
+.shipment-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1200px;
+  table-layout: fixed;
+}
+
+.shipment-table th,
+.shipment-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Column width distribution */
+.shipment-table th:nth-child(1),
+.shipment-table td:nth-child(1) { width: 10%; } /* Shipment ID */
+.shipment-table th:nth-child(2),
+.shipment-table td:nth-child(2) { width: 10%; } /* Container ID */
+.shipment-table th:nth-child(3),
+.shipment-table td:nth-child(3) { width: 15%; } /* Origin */
+.shipment-table th:nth-child(4),
+.shipment-table td:nth-child(4) { width: 15%; } /* Destination */
+.shipment-table th:nth-child(5),
+.shipment-table td:nth-child(5) { width: 15%; } /* Current Location */
+.shipment-table th:nth-child(6),
+.shipment-table td:nth-child(6) { width: 10%; } /* Status */
+.shipment-table th:nth-child(7),
+.shipment-table td:nth-child(7) { width: 15%; } /* ETA */
+.shipment-table th:nth-child(8),
+.shipment-table td:nth-child(8) { width: 10%; } /* Cargo Value */
+.shipment-table th:nth-child(9),
+.shipment-table td:nth-child(9) { width: 10%; } /* Actions */
+
+.shipment-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #2c3e50;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.shipment-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.location-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.location-cell strong {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.location-cell small {
+  color: #6c757d;
+  font-size: 0.85em;
+}
+
+.eta-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.actual-arrival {
+  color: #28a745;
+  font-weight: 500;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-in-transit {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.status-delivered {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-delayed {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-cancelled {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+
+.shipment-link {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.shipment-link:hover {
+  text-decoration: underline;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.table-loading,
+.no-shipments {
+  text-align: center;
+  padding: 40px;
+  color: #6c757d;
+}
+
+.no-shipments .btn {
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .shipment-table-container {
+    font-size: 14px;
+  }
+  
+  .shipment-table th,
+  .shipment-table td {
+    padding: 8px;
+  }
+  
+  .location-cell small {
+    display: none;
+  }
+}
